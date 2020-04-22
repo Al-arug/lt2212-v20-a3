@@ -5,10 +5,8 @@ import numpy as np
 import pandas as pd
 import torch
 from torch import nn
-import torch.optim as optim
-import torchvision 
+import torch.optim as optim 
 import random
-import torch.nn.functional as F
 from torch.autograd import Variable
 
 
@@ -61,7 +59,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train and test a model on features.")
     parser.add_argument("featurefile", type=str, help="The file containing the table of instances and features.")
     parser.add_argument("hiddenlayer", type=int, default=None,nargs='?', help="If hidden layer add the size")
-    parser.add_argument("nonliniarity", type=str, default=None,nargs='?', help="If hidden layer add the size")
+    parser.add_argument("nonliniarity", type=str, default=None,nargs='?', help="If hidden layer add nonliniar finction by typing either relu or  softmax")
     # Add options here for part 3 -- hidden layer and nonlinearity,
     # and any other options you may think you want/need.  Document
     # everything.
